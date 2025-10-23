@@ -33,9 +33,6 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
   }, [isRunning, timeLeft]);
 
   function startTimer() {
-    if (timeLeft === 0) {
-      setTimeLeft(25 * 60); // Default pomodoro is 25 mins
-    }
     setIsRunning(true);
   }
   function pauseTimer() {
@@ -43,7 +40,7 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
   }
   function resetTimer() {
     setIsRunning(false);
-    setTimeLeft(25 * 60);
+    setTimeLeft(25 * 60); // Default pomodoro is 25 mins
   }
 
   return (
