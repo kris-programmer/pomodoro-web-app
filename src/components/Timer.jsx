@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Timer = ({ minutes = 0, seconds = 0 }) => {
-  const [timeLeft, setTimeLeft] = useState(0); // Time is in seconds
+  const [timeLeft, setTimeLeft] = useState(1500); // Time is in seconds (25 mins)
   const [isRunning, setIsRunning] = useState(false);
 
   // Input validation and zero padding
@@ -54,20 +54,20 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
         {formattedMinutes}:{formattedSeconds}
       </time>
 
-      <div className="btns flex gap-1">
+      <div className="btns flex gap-1 m-5">
         {isRunning === false ? (
           <button
             onClick={startTimer}
             className="p-1 border bg-gray-600 border-white m-2 hover:bg-gray-400"
           >
-            Start
+            Start Timer
           </button>
         ) : (
           <button
             onClick={pauseTimer}
             className="p-1 border bg-gray-600 border-white m-2 hover:bg-gray-400"
           >
-            Pause
+            Pause Timer
           </button>
         )}
 
@@ -75,7 +75,34 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
           onClick={resetTimer}
           className="p-1 border bg-gray-600 border-white m-2 hover:bg-gray-400"
         >
-          Reset
+          Reset Timer
+        </button>
+      </div>
+
+      <div className="quick-add-buttons flex gap-2 mt-4">
+        <button
+          onClick={() => setTimeLeft((prev) => prev + 300)}
+          className="p-2 border bg-blue-600 border-white hover:bg-blue-400 m-1"
+        >
+          +5 min
+        </button>
+        <button
+          onClick={() => setTimeLeft((prev) => Math.max(0, prev - 300))}
+          className="p-2 border bg-blue-600 border-white hover:bg-blue-400 m-1"
+        >
+          -5 min
+        </button>
+        <button
+          onClick={() => setTimeLeft(15 * 60)}
+          className="p-2 border bg-purple-600 border-white hover:bg-purple-400 m-1"
+        >
+          Long Break
+        </button>
+        <button
+          onClick={() => setTimeLeft(5 * 60)}
+          className="p-2 border bg-purple-600 border-white hover:bg-purple-400 m-1"
+        >
+          Short Break
         </button>
       </div>
     </div>
