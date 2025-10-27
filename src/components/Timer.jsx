@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const Timer = ({ minutes = 0, seconds = 0 }) => {
   const [timeLeft, setTimeLeft] = useState(1500); // Time is in seconds (25 mins)
   const [isRunning, setIsRunning] = useState(false);
+  const [labelMode, setLabelMode] = useState("Work");
 
   // Input validation and zero padding
   const formatTime = (totalSeconds) => {
@@ -41,6 +42,7 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
   function resetTimer() {
     setIsRunning(false);
     setTimeLeft(25 * 60); // Default pomodoro is 25 mins
+    setLabelMode("Work");
   }
 
   return (
@@ -50,6 +52,7 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
       aria-live="polite"
       aria-label={`${formattedMinutes} minutes and ${formattedSeconds} seconds remaining`}
     >
+      <label className="current-job font-normal text-5xl">{labelMode}</label>
       <time dateTime={`PT${minutes}M${seconds}S`} className="text-9xl">
         {formattedMinutes}:{formattedSeconds}
       </time>
@@ -93,13 +96,19 @@ const Timer = ({ minutes = 0, seconds = 0 }) => {
           -5 min
         </button>
         <button
-          onClick={() => setTimeLeft(15 * 60)}
+          onClick={() => {
+            setTimeLeft(15 * 60);
+            setLabelMode("Long Break");
+          }}
           className="p-2 border bg-purple-600 border-white hover:bg-purple-400 m-1"
         >
           Long Break
         </button>
         <button
-          onClick={() => setTimeLeft(5 * 60)}
+          onClick={() => {
+            setTimeLeft(5 * 60);
+            setLabelMode("Short Break");
+          }}
           className="p-2 border bg-purple-600 border-white hover:bg-purple-400 m-1"
         >
           Short Break
