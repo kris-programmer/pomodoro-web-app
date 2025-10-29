@@ -14,4 +14,4 @@ A clean, modern, and responsive Pomodoro Timer web application built with HTML, 
 ⏸️ Play/Pause & Reset: Full control over your timer with play, pause, and reset functionality.
 
 🚀 Live Demo
-Check out the live application here: [\[Live Demo Link\]](https://github.com/kris-programmer/pomodoro-web-app)
+Check out the live application here: [\[Live Demo Link\]](https://kris-programmer.github.io/pomodoro-web-app/)
