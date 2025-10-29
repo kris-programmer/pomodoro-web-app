@@ -1,16 +1,17 @@
-# React + Vite
+A clean, modern, and responsive Pomodoro Timer web application built with HTML, CSS (TailWind), and React (JavaScript). This tool helps you implement the Pomodoro Technique to boost productivity and maintain focus.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Pomodoro Timer Screenshot](./src/assets/sitePC.png)
 
-Currently, two official plugins are available:
+✨ Features
+⏱️ Standart Pomodoro Timer: Standart focus (pomodoro) and break intervals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔄 Easy Session Switching: Button switches allow for quick switching between focus and breaks.
 
-## React Compiler
+📱 Responsive Design: Works seamlessly on desktop, tablet, and mobile devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎨 Clean & Minimal UI: A distraction-free interface to help you stay focused on your task.
 
-## Expanding the ESLint configuration
+⏸️ Play/Pause & Reset: Full control over your timer with play, pause, and reset functionality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 Live Demo
+Check out the live application here: [\[Live Demo Link\]](https://github.com/kris-programmer/pomodoro-web-app)
