@@ -1,4 +1,4 @@
-#**🍅 Pomodoro Focus Timer - Boost Your Productivity**
+# 🍅 Pomodoro Focus Timer - Boost Your Productivity
 
 A clean, modern, and responsive Pomodoro Timer web application built with HTML, CSS (TailWind), and React (JavaScript). This tool helps you implement the Pomodoro Technique to boost productivity and maintain focus.
 
